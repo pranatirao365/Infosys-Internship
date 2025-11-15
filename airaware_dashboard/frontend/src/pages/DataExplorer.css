@@ -1,0 +1,87 @@
+/* Data Explorer Page - Refined Design */
+.data-explorer-page {
+  min-height: 100vh;
+  background: #f8faf9;
+  padding: 24px;
+}
+
+/* Data Explorer Header - Sophisticated Emerald */
+.data-explorer-header {
+  text-align: center;
+  margin-bottom: 28px;
+  padding: 32px 40px;
+  background: linear-gradient(135deg, #047857 0%, #059669 50%, #10b981 100%);
+  border-radius: 12px;
+  box-shadow: 0 4px 16px rgba(4, 120, 87, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  position: relative;
+  overflow: hidden;
+}
+
+.data-explorer-header::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.08), transparent);
+  animation: headerShine 3s infinite;
+}
+
+@keyframes headerShine {
+  to {
+    left: 100%;
+  }
+}
+
+.data-explorer-header h1 {
+  font-size: 2.2rem;
+  font-weight: 800;
+  color: #ffffff;
+  margin: 0 0 8px 0;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+  letter-spacing: -0.5px;
+  position: relative;
+  z-index: 1;
+}
+
+.explorer-subtitle {
+  font-size: 1rem;
+  color: rgba(255, 255, 255, 0.92);
+  margin: 0;
+  font-weight: 500;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+  position: relative;
+  z-index: 1;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .data-explorer-page {
+    padding: 16px;
+  }
+
+  .data-explorer-header {
+    padding: 24px 28px;
+    margin-bottom: 20px;
+  }
+
+  .data-explorer-header h1 {
+    font-size: 1.8rem;
+  }
+
+  .explorer-subtitle {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .data-explorer-header h1 {
+    font-size: 1.5rem;
+  }
+
+  .explorer-subtitle {
+    font-size: 0.85rem;
+  }
+}
